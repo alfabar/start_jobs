@@ -1,0 +1,349 @@
+/* Regras de uso geral(Sem media queries) */
+/* Ajuste do box model pra tudo */
+*, *::after, *::before {box-sizing: border-box;} /* Usar dessa forma */
+
+/* imagens responsivas */
+img{max-width: 100%;}
+
+html{font-size: 14;}
+
+/* reset dos espaços padroes do navegador */
+body, h1, h2, h3, p, figure{
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  width: 100%;
+  border: none;
+
+}
+
+.historia iframe{
+  max-width: 800px;
+}
+
+body {
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tirar o anderline de todos os links */
+a{text-decoration: none;}
+
+
+h1, nav, span {
+  color: #01A0C6;
+}
+
+h1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+  
+}
+
+h1 a
+{ 
+color:  black;;
+padding: 0.3rem 1rem;
+border-radius: 5px;
+}
+
+/* INICIO MENU RESPONSIVO */
+
+header{
+  background-color: white;
+  /* position: deixa o cabeçalho fixo no topo da tela */
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* Fim do cabeçalho posicionado */
+}
+
+header .limitador{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.limitador{
+  max-width: 1100px;
+  width: 95vw;
+  margin: auto;
+}
+
+nav{
+  /* background-color: lightblue; */
+  width: 75%;
+}
+
+nav h2{text-align: right;}
+
+.icone{
+  /* background-color: lightcoral; */
+  color: black;
+  font-size: 1.2rem;
+  padding: 1rem;
+  display: inline-block;
+  height: 50px;
+
+}
+
+.menu{
+list-style: none;
+margin: 0;
+padding: 0;
+
+/* Iniciamos a lista de forma escondida */
+display: none;
+}
+
+
+
+.menu li a{
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+}
+
+nav a:hover, nav a:focus{
+  background-color: gainsboro;
+}
+
+/* Esta classe é manipulada via JS */
+.menu-aberto{
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+
+}
+
+/* FIM DO MENU RESPONSIVO */
+
+
+.destaque{
+  background-image: url(../imagens/fundo-destaque.jpg);
+  height: 90vh;
+  color: white;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Solução 1 */
+  /* flex-direction: column; */
+
+  /* Solução 2 wrap */
+  flex-wrap: wrap;
+  align-content: center;
+
+  
+  
+
+}
+
+.destaque h2{
+  font-size: clamp(2rem, 7vw, 7rem);
+  animation-name: fadeIn; /* Aplicando a animação */
+  animation-duration: 1.5s; /* Escolhendo a duração da animação */
+}
+
+.destaque p{
+  font-size: clamp(1.6rem, 2vw, 4rem);
+  font-weight: bold;
+  animation: fadeIn 1.5s 1s backwards; /* Aplicando animação segura a primeira e depois apresenta  */
+
+}
+
+/* Criando a animação chamada fadeIn */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Formatando os h2 do article */
+article h2{
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Paragrafos dos articles */
+article p{
+  padding: 0.5rem 0;
+  
+}
+
+figure{
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.historia {
+  background-image: url(../imagens/fundo-madeira.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 1rem;
+  text-align: center; /* Alinha o conteudo  */
+}
+
+.historia h2{
+  color: rgb(255, 255, 255);
+  text-shadow: black 1px 1px 2px; 
+}
+
+
+.front-end, .localizacao{
+  text-align: center;
+}
+
+footer{
+  background-color: #01A0C6;
+  color: rgb(255, 255, 255);
+  text-align:center;
+  font-weight: bold;
+  padding: 7vh 0;
+ /*  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+
+}/*  */
+
+
+/*======== REGRAS PARA AS PAGINAS DE PRODUTOS, SERVIÇOS E CONTATO =======*/
+
+.conteudo{
+  background-color:whitesmoke;
+  padding: .7rem;
+  border-radius: 7px;
+}
+
+/* Formatar a tabela */
+table, td, th{
+  border: solid 2px black;
+  border-collapse: collapse;
+}
+
+table{
+  width: 80vw;
+  margin: auto;
+  max-width:700px;
+  
+}
+th{
+  background-color: black;
+  color: white;
+}
+
+td{
+  background-color: white;
+}
+
+th, td{
+  width: 33%;
+  padding: 0.5rem;
+}
+
+td:last-child{color: blue;}
+
+caption{
+  /* negrito */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
+/* FORMATANDO O FORMULARIO */
+form{
+  max-width: 500px;
+  width: 95vw;
+  margin: auto;
+  background-color: whitesmoke;
+  padding: 1rem;
+  border-radius: 10px;
+
+}
+
+/* seletor :not()
+Criar exceções. no exemplo abaixo vamos formatar todos os inputs exceto radio e check box.
+*/
+input:not([type=radio]):not([type="checkbox"]), select, textarea{
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding: 2%;
+  box-shadow: black 0 0 1px inset;
+}
+
+textarea{
+  height: auto;
+}
+/* Selecionar só o primeiro td e mudar para texto maiusculo */
+td:first-child{  text-transform: uppercase;}
+/* td:nth-child(2){color: #f0f;} Escolhendo o filho */
+
+button{
+background-color: black;
+color: white;
+border: none;
+padding: 1rem;
+font-weight: bold;
+margin-top: 0.2rem;
+}
+
+button:hover, button:focus{
+  background-color: darkblue;
+  cursor: pointer;
+}
+
+form div{
+  margin-top: 1rem;
+}
+
+/* largura de 80%
+ centralizada na tela com margin
+ limitada no maximo a 700px max-width
+ linha de cabeçalho da tabela th vai ter o fundo preto e o texto branco */
+
+
+
+/* Regras especificas de acordo com o tamanho da tela */
+
+/* Telas maiores que 530px */
+@media screen and (min-width: 600px) {
+ 
+  .icone {display: none;}
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .menu{
+    padding: 0.8rem;
+  }
+  .menu a{
+    padding: 0 1rem;
+    
+  }
+  
+}
+
+/* Telas de 800px ou mais */
+@media screen and (min-width: 800px){
+  html{ font-size: 18px;  }
+  header .limitador{ height: 15vh;}
+  .destaque {height: 85vh;}
+
+
+
+}
