@@ -34,6 +34,9 @@ a{text-decoration: none;}
 
 h1, nav, span {
   color: #01A0C6;
+  padding: 0.3rem 1rem;
+  line-height: 0.9;
+
 }
 
 h1{
@@ -46,8 +49,8 @@ h1{
 h1 a
 { 
 color:  black;;
-padding: 0.3rem 1rem;
-border-radius: 5px;
+/* padding: 0.3rem 1rem; */
+
 }
 
 /* INICIO MENU RESPONSIVO */
