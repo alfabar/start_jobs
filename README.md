@@ -17,6 +17,7 @@ StartJobs é um site para encontrar e cadastrar vagas de emprego
 
 salvando teste
 
-Irei trabalhar no Header (Tiago) ok
+## Tiago
+Irei trabalhar no Header (Atividade do header concluída)
 Fiz o logotipo nas duas páginas disponiveis, index e nos contatos, Estavam faltando alguns arquivos por exemplo o jquery, carreguei o mesmo ao projeto e agora os plugins do formulario estão ok.
 
