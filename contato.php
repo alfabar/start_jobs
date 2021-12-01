@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,28 +15,29 @@
   <meta name="description" content="Entre em contato com nossos consultores">
   <!-- Palavras chaves Quanto menos palavras chaves melhor)-->
   <meta name="keywords" content="contato">
-  
+
   <link rel="stylesheet" href="css/styles.css">
 
- </head>
+</head>
+
 <body>
   <!-- Cabeçalho/topo -->
   <header>
     <div class="limitador">
-    <h1>
-      <a href="index.html">Start<br><span>Jobs</span></a> 
-    </h1>
-    <nav>
-      <h2><a href="" class="icone">Menu &equiv; </a></h2>
-      <ul class="menu ">
-        <!-- utilizar title para descrever o link acessibilidade e SO -->
-        <li><a href="index.html" title="página inicial">Home</a></li>
-        <li><a href="cursos.html" title="Cursos">Cursos</a></li>
-        <li><a href="sobre.html" title="Sobre nós">Sobre</a></li>
-        <li><a href="contato.html" title="fale com a equipe do start jobs">Contatos</a></li>
-      </ul>
-    </nav>
-  </div>
+      <h1>
+        <a href="index.php">Start<br><span>Jobs</span></a>
+      </h1>
+      <nav>
+        <h2><a href="" class="icone">Menu &equiv; </a></h2>
+        <ul class="menu ">
+          <!-- utilizar title para descrever o link acessibilidade e SO -->
+          <li><a href="index.php" title="página inicial">Home</a></li>
+          <li><a href="cursos.php" title="Cursos">Cursos</a></li>
+          <li><a href="sobre.php" title="Sobre nós">Sobre</a></li>
+          <li><a href="contato.php" title="fale com a equipe do start jobs">Contatos</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <!-- Conteúdo -->
   <main>
@@ -134,7 +136,7 @@
           <label for="cidade">Cidade:</label>
           <input type="text" name="cidade" id="cidade">
         </div>
-        
+
         <div>
           <label for="estado">Estado:</label>
           <input type="text" name="estado" id="estado">
@@ -152,7 +154,7 @@
         </div>
 
         <div>
-          <label for="mensagem">Mensagem: 
+          <label for="mensagem">Mensagem:
             <span id="maximo">(Restam <b id="caracteres">100</b> caracteres)</span>
           </label> <br>
           <textarea name="mensagem" id="mensagem" cols="20" rows="5" maxlength="100"></textarea>
@@ -163,7 +165,7 @@
 
     </article>
   </main>
- 
+
 
   <!-- rodapé/parte inferior -->
   <footer>
@@ -171,7 +173,7 @@
   </footer>
 
   <!-- Exemplos adicionais -->
-<!-- 
+  <!-- 
   <p>Conhecimento em HTML
   <progress value="60" max="100"></progress> 
 </p>
@@ -182,200 +184,197 @@
 </details>
  -->
 
- <script src="js/menu.js"></script>
- <!-- Linkando para o vanilla masker (Formatar o formulario telefone) -->
- <script src="js/vanilla-masker.min.js"></script>
+  <script src="js/menu.js"></script>
+  <!-- Linkando para o vanilla masker (Formatar o formulario telefone) -->
+  <script src="js/vanilla-masker.min.js"></script>
 
- <script>
-   /* VMasker(document.querySelector("#telefone")).maskPattern("(99) 9999-9999"); */
-   /* VMasker(document.querySelector("#celular")).maskPattern("(99) 99999-9999");
- */
-   /* VMasker(document.querySelector("#cpf")).maskPattern("999.999.999-99"); */
+  <script>
+    /* VMasker(document.querySelector("#telefone")).maskPattern("(99) 9999-9999"); */
+    /* VMasker(document.querySelector("#celular")).maskPattern("(99) 99999-9999");
+     */
+    /* VMasker(document.querySelector("#cpf")).maskPattern("999.999.999-99"); */
 
-   /* -------------VALIDAR O CAMPO DE CEP------------- */
+    /* -------------VALIDAR O CAMPO DE CEP------------- */
 
-   /* REFERENCIAS : 
-   https://tecnoblog.net/495240/dev-full-stack-e-o-cargo-de-ti-mais-procurado-por-empresas-diz-pesquisa/amp/ 
-   
-   
-   http://vanilla-masker.github.io/vanilla-masker/
+    /* REFERENCIAS : 
+    https://tecnoblog.net/495240/dev-full-stack-e-o-cargo-de-ti-mais-procurado-por-empresas-diz-pesquisa/amp/ 
+    
+    
+    http://vanilla-masker.github.io/vanilla-masker/
 
-   */
-   VMasker(document.querySelector("#cep")).maskPattern("99999-999");
+    */
+    VMasker(document.querySelector("#cep")).maskPattern("99999-999");
 
     /* FORMATANDO CEP: */
-/* Referencias:
-https://viacep.com.br/
-https://viacep.com.br/exemplo/jquery/ */
+    /* Referencias:
+    https://viacep.com.br/
+    https://viacep.com.br/exemplo/jquery/ */
 
 
 
     /* FUNÇÃO PARA FORMATAR TELEFONE e CPF/CNPJ DINAMICAMENTE */
-  function inputHandler(masks, max, event) {
-  var c = event.target;
-  var v = c.value.replace(/\D/g, '');
-  var m = c.value.length > max ? 1 : 0;
-  VMasker(c).unMask();
-  VMasker(c).maskPattern(masks[m]);
-  c.value = VMasker.toPattern(v, masks[m]);
-}
+    function inputHandler(masks, max, event) {
+      var c = event.target;
+      var v = c.value.replace(/\D/g, '');
+      var m = c.value.length > max ? 1 : 0;
+      VMasker(c).unMask();
+      VMasker(c).maskPattern(masks[m]);
+      c.value = VMasker.toPattern(v, masks[m]);
+    }
 
-  var telMask = ['(99) 9999-99999', '(99) 99999-9999'];
-  var tel = document.querySelector('#telefone');
-  VMasker(tel).maskPattern(telMask[0]);
-  tel.addEventListener('input', inputHandler.bind(undefined, telMask, 14), false);
+    var telMask = ['(99) 9999-99999', '(99) 99999-9999'];
+    var tel = document.querySelector('#telefone');
+    VMasker(tel).maskPattern(telMask[0]);
+    tel.addEventListener('input', inputHandler.bind(undefined, telMask, 14), false);
 
-  var docMask = ['999.999.999-999', '99.999.999/9999-99'];
-  var doc = document.querySelector('#doc');
-  VMasker(doc).maskPattern(docMask[0]);
-  doc.addEventListener('input', inputHandler.bind(undefined, docMask, 14), false);
- </script>
+    var docMask = ['999.999.999-999', '99.999.999/9999-99'];
+    var doc = document.querySelector('#doc');
+    VMasker(doc).maskPattern(docMask[0]);
+    doc.addEventListener('input', inputHandler.bind(undefined, docMask, 14), false);
+  </script>
 
 
-          <!-- Referenciando biblioteca jquery 3.6 -->
+  <!-- Referenciando biblioteca jquery 3.6 -->
 
-<!-- Usando o sites: 
+  <!-- Usando o sites: 
 https://viacep.com.br/
 https://viacep.com.br/exemplo/jquery/ -->
 
-<!-- Sempre que carregar um plugin que usa jquery deve primeiro carregar a biblioteca do contrario o plugin nao funcionara. -->
+  <!-- Sempre que carregar um plugin que usa jquery deve primeiro carregar a biblioteca do contrario o plugin nao funcionara. -->
 
-<script src="plugins/jquery-3.6.0.min.js"></script>
+  <script src="plugins/jquery-3.6.0.min.js"></script>
 
-<script>
-
-  $(document).ready(function() {
+  <script>
+    $(document).ready(function() {
 
       function limpa_formulário_cep() {
-          // Limpa valores do formulário de cep.
-          $("#endereco").val("");
-          $("#bairro").val("");
-          $("#cidade").val("");
-          $("#estado").val("");
+        // Limpa valores do formulário de cep.
+        $("#endereco").val("");
+        $("#bairro").val("");
+        $("#cidade").val("");
+        $("#estado").val("");
       }
-      
+
       //Quando o campo cep perde o foco.
       $("#cep").blur(function() {
 
-          //Nova variável "cep" somente com dígitos.
-          var cep = $(this).val().replace(/\D/g, '');
+        //Nova variável "cep" somente com dígitos.
+        var cep = $(this).val().replace(/\D/g, '');
 
-          //Verifica se campo cep possui valor informado.
-          if (cep != "") {
+        //Verifica se campo cep possui valor informado.
+        if (cep != "") {
 
-              //Expressão regular para validar o CEP.
-              var validacep = /^[0-9]{8}$/;
+          //Expressão regular para validar o CEP.
+          var validacep = /^[0-9]{8}$/;
 
-              //Valida o formato do CEP.
-              if(validacep.test(cep)) {
+          //Valida o formato do CEP.
+          if (validacep.test(cep)) {
 
-                  //Preenche os campos com "..." enquanto consulta webservice.
-                  $("#endereco").val("...");
-                  $("#bairro").val("...");
-                  $("#cidade").val("...");
-                  $("#estado").val("...");
-                  $("#status").text("").css('color','black');
-                  
+            //Preenche os campos com "..." enquanto consulta webservice.
+            $("#endereco").val("...");
+            $("#bairro").val("...");
+            $("#cidade").val("...");
+            $("#estado").val("...");
+            $("#status").text("").css('color', 'black');
 
-                  //Consulta o webservice viacep.com.br/
-                  $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
 
-                      if (!("erro" in dados)) {
-                          //Atualiza os campos com os valores da consulta.
-                          $("#endereco").val(dados.logradouro);
-                          $("#bairro").val(dados.bairro);
-                          $("#cidade").val(dados.localidade);
-                          $("#estado").val(dados.uf);
-                          $("#status").text("CEP encontrado!").css('color','black');
-                      } //end if.
-                      else {
-                          //CEP pesquisado não foi encontrado.
-                          limpa_formulário_cep();
-                          $("#status").text("CEP não encontrado.").css('color','red');
-                      }
-                  });
+            //Consulta o webservice viacep.com.br/
+            $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function(dados) {
+
+              if (!("erro" in dados)) {
+                //Atualiza os campos com os valores da consulta.
+                $("#endereco").val(dados.logradouro);
+                $("#bairro").val(dados.bairro);
+                $("#cidade").val(dados.localidade);
+                $("#estado").val(dados.uf);
+                $("#status").text("CEP encontrado!").css('color', 'black');
               } //end if.
               else {
-                  //cep é inválido.
-                  limpa_formulário_cep();
-                  $("#status").text("Formato de CEP inválido.");
+                //CEP pesquisado não foi encontrado.
+                limpa_formulário_cep();
+                $("#status").text("CEP não encontrado.").css('color', 'red');
               }
+            });
           } //end if.
           else {
-              //cep sem valor, limpa formulário.
-              limpa_formulário_cep();
+            //cep é inválido.
+            limpa_formulário_cep();
+            $("#status").text("Formato de CEP inválido.");
           }
+        } //end if.
+        else {
+          //cep sem valor, limpa formulário.
+          limpa_formulário_cep();
+        }
       });
-  });
-
-</script>
-
-
-<!-- CONTADOR DE CARACTERES DO CAMPO DE MENSAGEM DO FORMULARIO -->
-<script>
-  // Selecionando os elementos que seram utilizados
-  const spanMaximo = $("#maximo");
-  const bCaracteres = $("#caracteres");
-  const textMensagem = $("#mensagem");
-
-
-  // Determinando a quantidade de caracteres
-  let quantidade = 100;
-
-  //Ouvinte de evento
-  textMensagem.on("input",function(){
-    //capturando o que for digitado
-    let conteudo = textMensagem.val();
-
-    //criando a contagem regressiva
-    let contagem = quantidade - conteudo.length;
-
-
-    // Exibindo o número no HTML
-
-    bCaracteres.text(contagem);
-
-
-    if(contagem ==0){
-      spanMaximo.css('color','red');
-      spanMaximo.text("limite de caracteres atingido");
-
-    }else{
-        spanMaximo.css('color','black');
-         spanMaximo.html("(Restam <b>"  +   contagem +  " </b> Caracteres)"); 
-
-      /* spanMaximo.html("(restam <b id='caracteres'>" + contagem + "</b> caracteres)"); */
-
-      }
-    
-
-  })
-
-</script>
-<!-- SCRIPT DO FORMSPREE - ENVIO DO FORMULARIO -->
-<script>
-  var form = document.getElementById("my-form");
-  
-  async function handleSubmit(event) {
-    event.preventDefault();
-    var status = document.getElementById("my-form-status");
-    var data = new FormData(event.target);
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: {
-          'Accept': 'application/json'
-      }
-    }).then(response => {
-      status.innerHTML = "Mensagem enviada com sucesso!";
-      form.reset()
-    }).catch(error => {
-      status.innerHTML = "Oops! Encontramos um problema, revise as informações e envie novamente."
     });
-  }
-  form.addEventListener("submit", handleSubmit)
-</script>
+  </script>
+
+
+  <!-- CONTADOR DE CARACTERES DO CAMPO DE MENSAGEM DO FORMULARIO -->
+  <script>
+    // Selecionando os elementos que seram utilizados
+    const spanMaximo = $("#maximo");
+    const bCaracteres = $("#caracteres");
+    const textMensagem = $("#mensagem");
+
+
+    // Determinando a quantidade de caracteres
+    let quantidade = 100;
+
+    //Ouvinte de evento
+    textMensagem.on("input", function() {
+      //capturando o que for digitado
+      let conteudo = textMensagem.val();
+
+      //criando a contagem regressiva
+      let contagem = quantidade - conteudo.length;
+
+
+      // Exibindo o número no HTML
+
+      bCaracteres.text(contagem);
+
+
+      if (contagem == 0) {
+        spanMaximo.css('color', 'red');
+        spanMaximo.text("limite de caracteres atingido");
+
+      } else {
+        spanMaximo.css('color', 'black');
+        spanMaximo.html("(Restam <b>" + contagem + " </b> Caracteres)");
+
+        /* spanMaximo.html("(restam <b id='caracteres'>" + contagem + "</b> caracteres)"); */
+
+      }
+
+
+    })
+  </script>
+  <!-- SCRIPT DO FORMSPREE - ENVIO DO FORMULARIO -->
+  <script>
+    var form = document.getElementById("my-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Mensagem enviada com sucesso!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! Encontramos um problema, revise as informações e envie novamente."
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+  </script>
 
 </body>
+
 </html>
-  
