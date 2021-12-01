@@ -44,6 +44,23 @@
   <main>
 
 
+    <!-- Esse campo devera ser editado com as informações do banco de dados de forma dinâmica -->
+    <article>
+      <h2>Vagas</h2>
+
+      <h3>Nome da Empresa</h3>
+      <ul>
+        <li>Nome: Programador Jr</li>
+        <li>Descrição: Irá trabalhar com php, js e html, desejavel conhecimento em mysql</li>
+        <li>Local: Rua 25 de Março, numero 123, SP</li>
+        <li>Salário: R$ 3.000,00</li>
+        <li>Sobre a Empresa: Aempresa X é uma mutilnacional ........</li>
+        <li>Categotia: TI</li>
+        <li>Beneficios: VR, VT, VA, Convenio......</li>
+      </ul>
+
+
+    </article>
 
   </main>
 
