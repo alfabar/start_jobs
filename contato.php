@@ -168,9 +168,9 @@
 
 
   <!-- rodapé/parte inferior -->
-  <footer>
-    <p>StartJobs é um site para encontrar e cadastrar vagas de emprego <br> Senac Penha &copy; 2021</p>
-  </footer>
+  <?php
+  require "footer.html"
+  ?>
 
   <!-- Exemplos adicionais -->
   <!-- 
