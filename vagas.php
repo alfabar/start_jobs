@@ -6,7 +6,7 @@
     <div class="container">
       <h1>Procurar Vagas</h1>
 <div class="form-outline">
-  <input type="search" id="form1" class="form-control" placeholder="Procurar Sua Vaga"
+  <input type="search" id="form1" class="form-control" placeholder="Procurar Sua"
   aria-label="Search" />
   <p></p>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar vagas</button>
