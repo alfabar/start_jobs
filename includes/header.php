@@ -23,7 +23,9 @@
 
 <body>
 <header class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="index.php">Navbar</a>
+    <div class="container">
+
+  <a class="navbar-brand" href="index.php">Star Jobs</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -47,6 +49,7 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Procurar">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar vagas</button>
     </form>
+  </div>
   </div>
 </header>
 <div class="container">
