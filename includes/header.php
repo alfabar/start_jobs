@@ -37,6 +37,9 @@
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="contato.php" title="fale com a equipe do start jobs">Contatos</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link disabled">Disabled</a>
       </li>
     </ul>
