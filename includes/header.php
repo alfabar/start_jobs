@@ -14,11 +14,11 @@
   <!-- Inserindo tags metas -->
   <!-- Descição não ultrapassar 160 caracteres -->
   <meta name="description" content="Encontre seu emprego aqui de forma totalmente gratuita">
-  <!-- Palavras chaves Quanto menos palavras chaves melhor)-->
+  <!-- Palavras chaves Quanto menos palavras chaves melhor-->
   <meta name="keywords" content="Emprego, Trabalho">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
@@ -26,7 +26,7 @@
   <header class="navbar navbar-expand-lg navbar-light bg-light">
     <!-- <a class="navbar-brand" href="index.php">Navbar</a> -->
     <h1 class="logo">
-      <a href="index.php">Start<br><span>Jobs</span></a>
+      <a class="navbar-brand" href="index.php">Start<br><span>Jobs</span></a>
     </h1>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
