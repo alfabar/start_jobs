@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Title é o que aparece no google escolher um texto de ate 60 caracteres -->
-  <title>Fale Conosco - Simplicity</title>
-  <!-- Inserindo o Favicon -->
-  <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
-
-  <!-- Inserindo tags metas -->
-  <!-- Descição não ultrapassar 160 caracteres -->
-  <meta name="description" content="Entre em contato com nossos consultores">
-  <!-- Palavras chaves Quanto menos palavras chaves melhor)-->
-  <meta name="keywords" content="contato">
-
-  <link rel="stylesheet" href="css/styles.css">
-  
-
-
-</head>
-
-<body>
+<?php include 'includes/header.php'; ?>
   <!-- Cabeçalho/topo -->
-  <header>
+<!--   <header>
     <div class="limitador">
       <h1>
         <a href="index.php">Start<br><span>Jobs</span></a>
@@ -32,7 +8,6 @@
       <nav>
         <h2><a href="" class="icone">Menu &equiv; </a></h2>
         <ul class="menu ">
-          <!-- utilizar title para descrever o link acessibilidade e SO -->
           <li><a href="index.php" title="página inicial">Home</a></li>
           <li><a href="cursos.php" title="Cursos">Cursos</a></li>
           <li><a href="sobre.php" title="Sobre nós">Sobre</a></li>
@@ -40,14 +15,14 @@
         </ul>
       </nav>
     </div>
-  </header>
+  </header> -->
   <!-- Conteúdo -->
-  <main>
+  <!-- <main>
     <article class="limitador conteudo">
       <h2>Contato</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quae odit beatae ratione rerum nisi, nostrum voluptatem ex expedita quas vel molestias ipsum, minima maiores necessitatibus? Aliquam dolore deleniti sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut vel, harum sequi veniam officiis praesentium molestias illum ullam vero facilis possimus explicabo aliquam repellendus hic nam sint fugit dolores beatae!</p>
 
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit cum modi animi, deleniti harum exercitationem qui nesciunt veniam officia est, laborum dolor molestias sunt mollitia maiores blanditiis assumenda molestiae ullam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio vero nostrum aspernatur corporis mollitia maiores distinctio delectus in itaque exercitationem modi nisi quas architecto, magni sunt temporibus, numquam nesciunt?</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit cum modi animi, deleniti harum exercitationem qui nesciunt veniam officia est, laborum dolor molestias sunt mollitia maiores blanditiis assumenda molestiae ullam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio vero nostrum aspernatur corporis mollitia maiores distinctio delectus in itaque exercitationem modi nisi quas architecto, magni sunt temporibus, numquam nesciunt?</p> -->
 
       <!-- Iniciando o formulario -->
       <!-- Metodo post n'ao mostra o dados na url mais seguro que get -->
@@ -61,23 +36,77 @@
     
 
     https://formspree.io/forms/xgerdnwo/integration
-    -->
-
+    --><div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Entre em contato</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div>
+    <form>
+    <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" id="nome" placeholder="Nome Completo">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="email">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Senha:</label>
+      <input type="password" class="form-control" id="senha">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Endereço:</label>
+    <input type="text" class="form-control" id="endereco" placeholder="Rua Ipiranga 123">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Complemento</label>
+    <input type="text" class="form-control" id="complemento" placeholder="Apartamento, Casa, Salão frente">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Cidade</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Estado</label>
+      <select id="inputState" class="form-control">
+        <option selected>escolha</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Cep:</label>
+      <input type="text" class="form-control" id="cep">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Aceito enviar cadastro
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
 
       <form action="https://formspree.io/f/xgerdnwo" method="POST" id="my-form">
-        <div>
-          <label for="nome">Nome:</label>
+        <div class="form-group">
+        <label for="nome">Nome Completo</label>
           <input type="text" name="nome" id="nome" placeholder="Nome Completo" required> <!-- required não deixa enviar -->
         </div>
-        <div>
+        <div class="form-group">
           <label for="email">E-mail:</label>
           <input type="email" name="email" id="email" required>
         </div>
-        <div>
+        <div class="form-group">
           <label for="data">Data de Nascimento:</label>
           <input type="date" name="data" id="data">
         </div>
-        <div>
+        <div class="form-group">
           <label for="telefone">Telefone:</label>
           <input type="tel" name="telefone" id="telefone" placeholder="Digite apenas numeros, incluindo o DDD">
         </div>
@@ -87,17 +116,16 @@
           <input type="celular" name="celular" id="celular" placeholder="Digite apenas numeros, incluindo o DDD">
         </div> -->
 
-        <div>
+        <div class="form-group">
           <label for="doc">CPF ou CNPJ:</label>
           <input type="doc" name="doc" id="doc">
         </div>
 
-        <div>
+        <div class="form-group">
           <label for="idade">Idade:</label>
           <input type="number" name="idade" id="idade" min="18" max="120">
         </div>
-        <div>
-          <p>Gênero:</p>
+        <div class="form-group">          <p>Gênero:</p>
           <input type="radio" name="genero" id="masculino" value="masculino">
           <label for="masculino">Masculino</label>
 
@@ -107,8 +135,7 @@
           <input type="radio" name="genero" id="outros" value="outros">
           <label for="outros">Outros</label>
         </div>
-        <div>
-          <p>Interesses:</p>
+        <div class="form-group">          <p>Interesses:</p>
           <input type="checkbox" name="interesses" id="design" value="design">
           <label for="design">Design</label>
 
@@ -119,33 +146,28 @@
           <label for="programacao">Programação</label>
         </div>
 
-        <div>
+        <div class="form-group">
           <label for="cep">CEP:</label>
           <input type="text" id="cep" name="cep" maxlength="9" required>
           <b id="status"></b>
         </div>
-
-        <div>
+        <div class="form-group">
           <label for="endereco">Endereço:</label>
           <input type="text" name="endereco" id="endereco" size="30">
         </div>
-
-        <div>
+        <div class="form-group"> 
           <label for="bairro">Bairro:</label>
           <input type="text" name="bairro" id="bairro">
         </div>
-        <div>
-          <label for="cidade">Cidade:</label>
+        <div class="form-group">          <label for="cidade">Cidade:</label>
           <input type="text" name="cidade" id="cidade">
         </div>
 
-        <div>
-          <label for="estado">Estado:</label>
+        <div class="form-group">          <label for="estado">Estado:</label>
           <input type="text" name="estado" id="estado">
         </div>
 
-        <div>
-          <label for="assunto">Assunto:</label>
+        <div class="form-group">          <label for="assunto">Assunto:</label>
           <select name="assunto" id="assunto">
             <option>Escolha uma opção</option>
             <option>Dúvidas</option>
@@ -155,8 +177,7 @@
           </select>
         </div>
 
-        <div>
-          <label for="mensagem">Mensagem:
+        <div class="form-group">          <label for="mensagem">Mensagem:
             <span id="maximo">(Restam <b id="caracteres">100</b> caracteres)</span>
           </label> <br>
           <textarea name="mensagem" id="mensagem" cols="20" rows="5" maxlength="100"></textarea>
@@ -165,15 +186,9 @@
         <p id="my-form-status"></p>
       </form>
 
-    </article>
+  <!--   </article>
   </main>
-
-
-  <!-- rodapé/parte inferior -->
-  <?php
-  require "footer.html"
-  ?>
-
+ -->
   <!-- Exemplos adicionais -->
   <!-- 
   <p>Conhecimento em HTML
@@ -376,7 +391,4 @@ https://viacep.com.br/exemplo/jquery/ -->
     }
     form.addEventListener("submit", handleSubmit)
   </script>
-
-</body>
-
-</html>
+<?php include 'includes/rodape.php'; ?>
