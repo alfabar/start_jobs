@@ -28,3 +28,5 @@ Realizei a separação do rodapéem um arquivo chamado footer.html e fiz a chama
 
 Tipo de beneficios
 ENUM("vt", "va", "vr", "am", "ao", "sv", "plr", "pc", "cb")
+
+teste
