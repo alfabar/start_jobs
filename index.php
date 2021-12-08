@@ -1,6 +1,6 @@
 <?php include 'includes/header.php'?>
   <!-- Cabeçalho/topo -->
-  <header>
+<!--   <header>
     <div class="limitador">
       <h1>
         <a href="index.php">Start<br><span>Jobs</span></a>
@@ -8,7 +8,7 @@
       <nav>
         <h2><a href="" class="icone">Menu &equiv; </a></h2>
         <ul class="menu ">
-          <!-- utilizar title para descrever o link acessibilidade e SO -->
+           utilizar title para descrever o link acessibilidade e SO
           <li><a href="index.php" title="página inicial">Home</a></li>
           <li><a href="cursos.php" title="Cursos">Cursos</a></li>
           <li><a href="sobre.php" title="Sobre nós">Sobre</a></li>
@@ -16,7 +16,7 @@
         </ul>
       </nav>
     </div>
-  </header>
+  </header> -->
 
   <!-- Conteúdo -->
   <main>
