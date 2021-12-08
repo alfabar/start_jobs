@@ -26,3 +26,5 @@ Fiz o logotipo nas duas páginas disponiveis, index e nos contatos, Estavam falt
 
 Tipo de beneficios
 ENUM("vt", "va", "vr", "am", "ao", "sv", "plr", "pc", "cb")
+
+teste
