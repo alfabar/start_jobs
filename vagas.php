@@ -4,7 +4,15 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1>Album example</h1>
+      <h1>Procurar Vagas</h1>
+
+<div class="input-group "> 
+  <form class="form-inline my-2 my-lg-4">
+      <input class="form-control mr-sm-2" type="search" placeholder="Procurar">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar vagas</button>
+    </form>
+</div>
+      
       <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
       <p>
         <a href="#" class="btn btn-primary my-2">Main call to action</a>
