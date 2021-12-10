@@ -1,4 +1,5 @@
 <?php include 'includes/header.php'?>
+<link rel="stylesheet" href="assets/css/main.css"/>
   <!-- Cabeçalho/topo -->
 <!--   <header>
     <div class="limitador">
@@ -17,6 +18,40 @@
       </nav>
     </div>
   </header> -->
+
+<!-- Testando o menu lateral AQUI -->
+<!-- Sidebar -->
+<div id="sidebar">
+  <div class="inner">
+    <!-- Search -->
+    <section id="search" class="alt">
+      <form method="post" action="#">
+        <input type="text" name="query" id="query" placeholder="Search" />
+      </form>
+    </section>
+
+    <!-- Menu -->
+    <nav id="menu">
+      <header class="major">
+        <h2>Menu</h2>
+      </header>
+      <ul>
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="generic.html">Generic</a></li>
+        <li><a href="elements.html">Elements</a></li>
+        <li>
+          <span class="opener">Submenu</span>
+          <ul>
+            <li><a href="#">Lorem Dolor</a></li>
+            <li><a href="#">Ipsum Adipiscing</a></li>
+            <li><a href="#">Tempus Magna</a></li>
+            <li><a href="#">Feugiat Veroeros</a></li>
+          </ul>
+        </li>
+      </nav>
+  </div>
+</div> <!-- Fim do menu lateral -->
+
   <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
       <h1 class="display-4 font-italic">Star Jobs Sua carreira começa aqui</h1>
@@ -24,6 +59,7 @@
       <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue Lendo...</a></p>
     </div>
   </div>
+
 
   <div class="row mb-2">
     <div class="col-md-6">
